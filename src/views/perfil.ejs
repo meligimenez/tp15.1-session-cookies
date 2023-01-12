@@ -1,0 +1,20 @@
+<%- include('./partials/head', {title: 'Perfil' }) %>
+
+  <body style="background-color: <%= locals.user?.color.hexa %>">
+    <div class="container">
+      <h2> Holaa <%= locals.user?.name %> 😊
+      </h2>
+      <p>Elegiste el color: <%= locals.user?.color.name %>
+      </p>
+      <% if ( locals.user?.age) { %>
+        <p>Tenes <%= locals.user.age %> años
+        </p>
+        <% } %>
+          <p>Tu correo electronico es:
+            <%= locals.user?.email %>
+          </p>
+          <a class="boton-sig-volver" href="/user/next">Next</a>
+    </div>
+  </body>
+
+  </html>
